@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 
 public class TaskSecondSendAnOrder extends PageBase {
@@ -35,9 +37,33 @@ public class TaskSecondSendAnOrder extends PageBase {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, \"mfp-content\")]//a[contains(@class, \"add-to-\")]")));
         WebElement elementButton = driver.findElement(By.xpath("//div[contains(@class, \"mfp-content\")]//a[contains(@class, \"add-to-\")]"));
         elementButton.click();
+
+        if (driver.findElements(By.xpath("//div[@class = \"mfp-content\"]//div[contains(@class, \"modal-body\")]")).size()>0)
+        {// Click on Teaching Notes
+
+            driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+
+
+            JavascriptExecutor executor = (JavascriptExecutor) driver;
+            executor.executeScript("$(document.elementFromPoint(1000, 280)).click();");
+
+        } else {
+            JavascriptExecutor jx = (JavascriptExecutor) driver;
+            WebElement RecommendedTitle = driver.findElement(By.xpath("//a[contains(@class, \"top-button\")]"));
+            jx.executeScript("arguments[0].scrollIntoView(true);",RecommendedTitle);
+
+
+
+
+        }
+
+
+
+
+       /* //div[@class = "mfp-content"]//div[contains(@class, "modal-body")]
+        */
         return this;
     }
-    /*wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, \"productBox\") and not(contains(@class, \"in-stop-list\")) and not (contains(@class, \"action-wrapper\"))]")));*/
 
 
     public TaskSecondSendAnOrder ScrollMenuToProductCards(){
