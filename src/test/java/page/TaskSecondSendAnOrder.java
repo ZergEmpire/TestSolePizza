@@ -67,11 +67,16 @@ public class TaskSecondSendAnOrder extends PageBase {
 
 
     public TaskSecondSendAnOrder ScrollMenuToProductCards(){
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, \"productBox\") and not(contains(@class, \"in-stop-list\")) and not (contains(@class, \"action-wrapper\"))]")));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class, \"productBox\")]")));
         JavascriptExecutor je = (JavascriptExecutor) driver;
-        WebElement element = driver.findElement(By.xpath("//div[contains(@class, \"productBox\") and not(contains(@class, \"in-stop-list\")) and not (contains(@class, \"action-wrapper\"))]"));
+        WebElement element = driver.findElement(By.xpath("//div[contains(@class, \"productBox\")]"));
         je.executeScript("arguments[0].scrollIntoView(true);",element);
-
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"image\" )]")));
+        isElementByDisplayed(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"image\" )]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"bottom\" )]")));
+        isElementByDisplayed(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"bottom\" )]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"bottom\" )]//div[contains(@class, \"price\" )]")));
+        isElementByDisplayed(By.xpath("//div [contains(@class, \"productBox\" )]//div[contains(@class, \"bottom\" )]//div[contains(@class, \"price\" )]"));
         return this;
     }
 
@@ -204,11 +209,11 @@ public class TaskSecondSendAnOrder extends PageBase {
         list.get(i).click();
         return this;
     }
-    public TaskSecondSendAnOrder ClickDesert (){
+/*    public TaskSecondSendAnOrder ClickDesert (){
         WebElement desert = driver.findElement(By.xpath("//span[contains(text(), 'Десерты')]"));
         desert.click();
         return this;
-    }
+    }*/
 
 
     public TaskSecondSendAnOrder CheckStatusOrder(){

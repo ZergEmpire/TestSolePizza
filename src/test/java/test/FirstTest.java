@@ -13,109 +13,64 @@ public class FirstTest extends TestBase {
     public void ScenarioForTestSendOrder() {
         main
                 .goTo();
-               /* .SelectCity()*/
+               /* .SelectCity();*/
         taskThreeTestSecondarySS.GoMainPage();
         taskSecondSendAnOrder
-
-
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .AssertElementsInMenuAfterClickCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .AssertElementsInMenuAfterClickCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .AssertElementsInMenuAfterClickCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .AssertElementsInMenuAfterClickCards()
                 .GoToFiledBasket()
 
                 .MathRandomHead()
                 .AssertElementsInMenu()
                 .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
+                .ClickGoTopButton()
                 .ScrollMenuToProductCards()
                 .ClickRandomCard()
-                .ScrollMenuToProductCards()
-                .ScrollMenuToProductCards()
-                .AssertElementsInMenuAfterClickCards()
                 .GoToFiledBasket()
-
-
-
 
                 .FillInFields()
                 .selectPayType()
@@ -131,7 +86,7 @@ public class FirstTest extends TestBase {
     public void ScenarioForTesOfSecondarySiteSections() {
         main
                 .goTo();
-                /*.SelectCity()*/
+                /*.SelectCity();*/
         taskThreeTestSecondarySS.GoMainPage();
         taskThreeTestSecondarySS.ScrollToFooterMainPage()
                 .CheckElementsInFooterSection()
